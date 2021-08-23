@@ -1,5 +1,5 @@
 // The below several lines are manually added
-use super::ckb_types::packed::*; // , prelude::*};
+use super::ckb_types::{packed::*, prelude::*};
 use super::molecule::{self, prelude::*};
 use super::vec;
 use super::ToOwned;
