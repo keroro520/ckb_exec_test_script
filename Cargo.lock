@@ -240,14 +240,14 @@ dependencies = [
 name = "exec_callee"
 version = "0.1.0"
 dependencies = [
- "ckb-std",
+ "exec_params",
 ]
 
 [[package]]
 name = "exec_caller"
 version = "0.1.0"
 dependencies = [
- "ckb-std",
+ "exec_params",
 ]
 
 [[package]]
