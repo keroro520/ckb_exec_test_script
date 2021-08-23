@@ -168,19 +168,17 @@ dependencies = [
 
 [[package]]
 name = "ckb-standalone-types"
-version = "0.0.1-pre.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "af2cdbdf65ee5b1da71504f5a03d6984bce77d0b4b46daff63f4ba4a3b0eef08"
+version = "0.0.2"
+source = "git+https://github.com/keroro520/ckb-standalone-types?tag=v0.0.2#89388b93dd98638459e660d10b520d58022128ee"
 dependencies = [
  "cfg-if 0.1.10",
- "molecule 0.6.1",
+ "molecule",
 ]
 
 [[package]]
 name = "ckb-std"
-version = "0.7.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5247e68ff32c17714105e2460db6113fb99efde8c830bbdd99f8bf715100dd64"
+version = "0.8.0"
+source = "git+https://github.com/keroro520/ckb-std?tag=v0.8.0#661908086c4b606b0a2a17ff11e95d5677c6d2e8"
 dependencies = [
  "buddy-alloc",
  "cc",
@@ -203,7 +201,7 @@ dependencies = [
  "ckb-rational",
  "derive_more",
  "merkle-cbt",
- "molecule 0.7.2",
+ "molecule",
  "numext-fixed-uint",
  "once_cell",
 ]
@@ -259,7 +257,7 @@ dependencies = [
  "cfg-if 0.1.10",
  "ckb-std",
  "ckb-types",
- "molecule 0.7.2",
+ "molecule",
 ]
 
 [[package]]
@@ -305,15 +303,6 @@ name = "merkle-cbt"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6f1ac8428ec02d6caa5a79c15e851d84d5dc7a00df0429a8aa860d104f0a81be"
-dependencies = [
- "cfg-if 0.1.10",
-]
-
-[[package]]
-name = "molecule"
-version = "0.6.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3067ceba3d7f5dcc7427cfc584fc506e756f1161151032fec840455f5a3c2fd5"
 dependencies = [
  "cfg-if 0.1.10",
 ]
