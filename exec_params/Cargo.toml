@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 cfg-if = "0.1"
-ckb-std = { version = "0.7.1", optional = true }
+ckb-std = { version = "0.7.4", optional = true }
 ckb-types = { version = "0.43.2", optional = true }
 molecule = { version = "=0.7.2", default_features = false, optional = true }
 
