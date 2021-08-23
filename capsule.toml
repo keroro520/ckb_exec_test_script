@@ -14,6 +14,6 @@ docker_image = "a961904bb36e5eebe4565ec3d264b96f35ed4491e9faf7373a1ea7f6e1f45720
 name = "exec_callee"
 template_type = "Rust"
 
-# [[contracts]]
-# name = "exec_caller"
-# template_type = "Rust"
+[[contracts]]
+name = "exec_caller"
+template_type = "Rust"
