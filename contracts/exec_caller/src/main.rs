@@ -14,7 +14,6 @@
 mod entry;
 mod error;
 
-use ckb_std::default_alloc;
 pub use exec_params::{
     ckb_std,
     ckb_std::default_alloc,
