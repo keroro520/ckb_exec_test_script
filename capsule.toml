@@ -1,19 +1,19 @@
-# [rust]
-# # path of rust contracts workspace directory,
-# # a `Cargo.toml` file is expected under the directory.
-# workspace_dir = "."
-# toolchain = "nightly-2020-09-28"
-# docker_image = "jjy0/ckb-capsule-recipe-rust:2020-9-28"
-
 # capsule version
 version = "0.4.6 36d59e0"
 # path of deployment config file
-deployment = "deployment.toml"
+deployment = "." # /Users/keroro520/cryptape/exec_test_script/deployment.toml"
+
+[rust]
+# path of rust contracts workspace directory,
+# a `Cargo.toml` file is expected under the directory.
+workspace_dir = "." # /Users/keroro520/cryptape/exec_test_script"
+toolchain = "nightly-2021-08-20"
+docker_image = "a961904bb36e5eebe4565ec3d264b96f35ed4491e9faf7373a1ea7f6e1f45720"
 
 [[contracts]]
 name = "exec_callee"
 template_type = "Rust"
 
-[[contracts]]
-name = "exec_caller"
-template_type = "Rust"
+# [[contracts]]
+# name = "exec_caller"
+# template_type = "Rust"
