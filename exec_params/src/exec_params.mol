@@ -1,0 +1,13 @@
+import blockchain;
+
+// array Uint32 [byte; 4];
+// array Uint64 [byte; 8];
+// vector Bytes <byte>;
+
+table ExecParams {
+    source: Uint32,
+    place: Uint32,
+    index: Uint32,
+    bounds: Uint64,
+    expected_result: Bytes,
+}

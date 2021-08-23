@@ -1,0 +1,18 @@
+[package]
+name = "exec_params"
+version = "0.1.0"
+authors = ["keroro <keroroxx520@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cfg-if = "0.1"
+ckb-std = { version = "0.7.1", optional = true }
+ckb-types = { version = "0.43.2", optional = true }
+molecule = { version = "0.7.2", default_features = false, optional = true }
+
+[features]
+default = ["std"]
+std = ["ckb-types", "molecule/std"]
+no-std = ["ckb-std", "molecule"]
