@@ -23,17 +23,23 @@ pub fn main() -> Result<(), Error> {
     let script = load_script()?;
     let script_args = script.args();
     let script_args_bytes = script_args.as_bytes();
-    ExecParamsReader::verify(&script_args_bytes, false)?;
+    crate::ckb_std::syscalls::debug(alloc::format!("script_args_bytes.len: {}", script_args_bytes.len()));
+    let verify_result = ExecParamsReader::verify(&script_args_bytes, false);
+
+    crate::ckb_std::syscalls::debug(alloc::format!(
+        "verify_result: {:?}", verify_result)
+    );
 
     let exec_params_reader: ExecParamsReader = ExecParamsReader::new_unchecked(&script_args_bytes);
     let exec_params: ExecParams = exec_params_reader.to_entity();
     let source: u32 = exec_params.source().unpack();
-    let place: u32 = exec_params.place().unpack();
-    let index: u32 = exec_params.index().unpack();
+    let place: u32  = exec_params.place().unpack();
+    let index: u32  = exec_params.index().unpack();
     let bounds: u64 = exec_params.bounds().unpack();
-    let argc = 1;
-    let expected_result: Bytes = exec_params.expected_result().unpack();
-    let argv = vec![expected_result];
+    let argc = 0;
+    let argv = vec![];
+    // let expected_result: Bytes = exec_params.expected_result().unpack();
+    // let argv = vec![expected_result];
 
     syscall_exec(index, source, place, bounds, argc, argv).map_err(Into::into)
 }

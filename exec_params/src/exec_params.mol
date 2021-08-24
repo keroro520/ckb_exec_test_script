@@ -9,5 +9,5 @@ table ExecParams {
     place: Uint32,
     index: Uint32,
     bounds: Uint64,
-    expected_result: Bytes,
+    // expected_result: Bytes,
 }
